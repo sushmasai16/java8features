@@ -22,7 +22,7 @@ public class EmployeeMain {
 		
 		empBo = new EmployeeBO();
 		empBo.setName("yama");
-		empBo.setSalary(50);
+		empBo.setSalary(500);
 		empl.add(empBo);
 		
 		empBo = new EmployeeBO();
@@ -35,13 +35,17 @@ public class EmployeeMain {
 		empBo.setSalary(10);
 		empl.add(empBo);	
 		
+		empl.stream().map(e -> e.getSalary()).sorted().
+		forEach(System.out::println);
+		System.out.println("==========");
+		
 		Integer num = empl.stream().
 				map(EmployeeBO::getSalary).
 				sorted((a,b)->b-a).
 				skip(empl.size()-2)
 				.findFirst()
 				.orElse(null) ;
-				System.out.println(num);
+				System.out.println(num+"--------");
 //				collect(Collectors.toList());
 		
 //		for (Iterator iterator = ls.iterator(); iterator.hasNext();) {
@@ -60,6 +64,15 @@ public class EmployeeMain {
 //		for (Integer integer : numls) {
 //			System.out.println(integer);
 //		}
+				
+				
+				Integer orElse = empl.stream().map(e -> e.getSalary()).distinct().
+						sorted((a,b) -> b-a)
+						
+						.skip(2).findFirst().orElse(0);
+				
+				System.out.println("employe higheest : "+orElse);
+				
 	}
 
 }
