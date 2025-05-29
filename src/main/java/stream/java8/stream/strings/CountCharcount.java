@@ -16,9 +16,13 @@ public class CountCharcount {
 		
 		Map<Character, Long> collect = str.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 	
-		collect.entrySet().forEach(ent -> System.out.println("char : "+ent.getKey()+" count : "+ent.getValue()));
+//		collect.entrySet().forEach(ent -> System.out.println("char : "+ent.getKey()+" count : "+ent.getValue()));
 		
+		str.chars().distinct().mapToObj(c -> String.valueOf((char) c)).collect(Collectors.joining());
 		
+		Map<Character, Long> collect2 = str.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(c -> c,Collectors.counting()));
+		
+		collect2.entrySet().forEach(ent -> System.out.println("char : "+ent.getKey()+" count : "+ent.getValue()));
 	}
 
 }
