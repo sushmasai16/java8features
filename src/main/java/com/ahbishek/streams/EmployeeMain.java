@@ -12,6 +12,7 @@ public class EmployeeMain {
 		List<Employee> emp = getEmployeeDetails();
 		List<Employee> emp1 = getEmployeeDetails();
 		List<Employee> emp2 = getEmployeeDetails();
+		List<Employee> emp3 = getEmployeeDetails();
 		//distinct
 		//emp.stream()
 		//.distinct().forEach(System.out::println);
