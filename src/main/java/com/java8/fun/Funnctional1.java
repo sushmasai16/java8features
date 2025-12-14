@@ -11,7 +11,15 @@ public interface Funnctional1 {
 
 		 System.out.println("fun2fffffdddddds");
 
+
 		 System.out.println("fun2fffffddddddsnn");
+
+
+		 System.out.println("fun2fffffddddddsnn");
+		 
+		 System.out.println("test");
+		 
+
 
 	 }
 	
