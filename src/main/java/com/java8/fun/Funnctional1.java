@@ -8,6 +8,7 @@ public interface Funnctional1 {
 	 default void strm1() {
 //		 return "fun1";
 		 System.out.println("fun1");
+		 System.out.println("fun2");
 	 }
 	
 
