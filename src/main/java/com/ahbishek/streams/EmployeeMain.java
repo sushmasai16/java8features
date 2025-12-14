@@ -10,7 +10,7 @@ public class EmployeeMain {
 	public static void main(String[] args) {
 		
 		List<Employee> emp = getEmployeeDetails();
-		
+		List<Employee> emp1 = getEmployeeDetails();
 		//distinct
 		//emp.stream()
 		//.distinct().forEach(System.out::println);
